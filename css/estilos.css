@@ -1,0 +1,283 @@
+/* ============================================
+   Kivo — Estilos Semana 4
+   CSS propio debajo de Bootstrap 5 (CDN).
+   Conserva la identidad visual de Kivo
+   (fondo oscuro + acento naranjo).
+   El layout responsivo lo resuelve Bootstrap
+   (navbar, grid, cards y carousel).
+   ============================================ */
+
+:root {
+  --color-fondo: #141820;
+  --color-superficie: #1e2633;
+  --color-texto: #e8eaed;
+  --color-texto-suave: #b0b8c4;
+  --color-acento: #ff7a18;
+  --color-acento-hover: #ff9540;
+  --color-borde: #3a4556;
+  --color-nav: #0f131a;
+  --fuente-principal: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-acento);
+}
+
+a:hover {
+  color: var(--color-acento-hover);
+}
+
+/* --- Navbar Bootstrap personalizada --- */
+.kivo-navbar {
+  background-color: var(--color-nav);
+  border-bottom: 3px solid var(--color-acento);
+}
+
+.kivo-navbar .navbar-brand {
+  color: var(--color-acento);
+  font-weight: bold;
+}
+
+.kivo-navbar .navbar-brand:hover,
+.kivo-navbar .navbar-brand:focus {
+  color: var(--color-acento-hover);
+}
+
+.kivo-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+}
+
+.kivo-navbar .nav-link {
+  color: var(--color-texto);
+  font-weight: bold;
+}
+
+.kivo-navbar .nav-link:hover,
+.kivo-navbar .nav-link:focus {
+  color: var(--color-acento);
+}
+
+.kivo-navbar .nav-link.active {
+  color: #141820;
+  background-color: var(--color-acento);
+  border-radius: 4px;
+}
+
+.kivo-navbar .navbar-toggler {
+  border: 2px solid var(--color-acento);
+}
+
+.kivo-hero {
+  background-color: var(--color-nav);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.kivo-hero h1 {
+  color: var(--color-acento);
+  font-weight: bold;
+}
+
+.tagline {
+  color: var(--color-texto-suave);
+}
+
+/* --- Cajas de contenido --- */
+.content-box {
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+}
+
+.content-box h2 {
+  color: var(--color-acento);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-borde);
+  padding-bottom: 0.5rem;
+}
+
+.content-box p {
+  color: var(--color-texto-suave);
+}
+
+/* --- Carrusel: misma altura en todas las diapositivas --- */
+.carousel-inner {
+  background-color: #0b1226;
+}
+
+.carousel-item img {
+  height: 280px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .carousel-item img {
+    height: 380px;
+  }
+}
+
+.carousel-caption {
+  background-color: rgba(15, 19, 26, 0.65);
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: var(--color-acento);
+}
+
+/* --- Cards de productos --- */
+.kivo-card {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  border: 2px solid var(--color-borde);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.kivo-card .card-title {
+  color: var(--color-texto);
+}
+
+.kivo-card .card-text {
+  color: var(--color-texto-suave);
+}
+
+.kivo-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.kivo-card-1 {
+  border-color: var(--color-acento);
+}
+
+.kivo-card-2 {
+  border-color: #3b82f6;
+}
+
+.kivo-card-3 {
+  border-color: #22c55e;
+}
+
+.kivo-card:hover {
+  background-color: #252d3d;
+  transform: scale(1.02);
+}
+
+/* --- Botones Kivo --- */
+.btn-kivo {
+  background-color: var(--color-acento);
+  color: #141820;
+  font-weight: bold;
+  border: 2px solid var(--color-acento);
+}
+
+.btn-kivo:hover,
+.btn-kivo:focus {
+  background-color: var(--color-acento-hover);
+  color: #141820;
+  border-color: var(--color-acento-hover);
+}
+
+.btn-kivo-outline {
+  background-color: transparent;
+  color: var(--color-texto);
+  font-weight: bold;
+  border: 2px solid var(--color-borde);
+}
+
+.btn-kivo-outline:hover,
+.btn-kivo-outline:focus {
+  background-color: var(--color-borde);
+  color: var(--color-texto);
+  border-color: var(--color-texto-suave);
+}
+
+/* --- Listas del aside --- */
+.category-list,
+.steps-list {
+  color: var(--color-texto-suave);
+  padding-left: 1.25rem;
+}
+
+/* --- Formulario (Bootstrap + paleta Kivo) --- */
+#contacto-principal {
+  border-color: var(--color-acento);
+}
+
+.contact-form fieldset {
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+}
+
+.contact-form legend {
+  color: var(--color-acento);
+  font-weight: bold;
+}
+
+.contact-form .form-label {
+  color: var(--color-texto);
+  font-weight: bold;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  border-color: var(--color-borde);
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  border-color: var(--color-acento);
+  box-shadow: 0 0 0 0.2rem rgba(255, 122, 24, 0.25);
+}
+
+.contact-form .form-check-label {
+  color: var(--color-texto);
+}
+
+.contact-form .form-check-input:checked {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+}
+
+/* --- Footer --- */
+.site-footer {
+  background-color: var(--color-nav);
+  color: var(--color-texto-suave);
+  border-top: 3px solid var(--color-acento);
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--color-acento);
+}
+
+.site-footer a:hover {
+  color: var(--color-acento-hover);
+}

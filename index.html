@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kivo: tienda de videojuegos. Página de inicio.">
+    <title>Inicio - Kivo</title>
+    <!-- Bootstrap 5.3 por CDN (recomendación del profesor: no versionar archivos locales) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS propio de Kivo: siempre debajo de Bootstrap para personalizar sin perder utilidades -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- ========== Barra de navegación Bootstrap (colapsa en móviles) ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark kivo-navbar" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img class="kivo-logo" src="img/logo.png" alt="Logo de Kivo: un zorro con audífonos y un control de videojuegos" width="48" height="48">
+                <span>Kivo</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="kivo-hero py-4">
+        <div class="container">
+            <h1 id="top" class="h2 mb-2">Kivo</h1>
+            <p class="tagline mb-0">El juego encuentra su lugar: títulos nuevos, clásicos y ofertas de la semana.</p>
+        </div>
+    </header>
+
+    <main class="container py-4 flex-grow-1">
+
+        <!-- ========== Carrusel: cambia automáticamente cada 3 segundos ========== -->
+        <section class="mb-4" aria-labelledby="carrusel-titulo">
+            <h2 id="carrusel-titulo" class="visually-hidden">Destacados de la semana</h2>
+            <div id="carruselKivo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carruselKivo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Banner de Kivo"></button>
+                    <button type="button" data-bs-target="#carruselKivo" data-bs-slide-to="1" aria-label="Zelda: Echoes of Time"></button>
+                    <button type="button" data-bs-target="#carruselKivo" data-bs-slide-to="2" aria-label="Cyber Racers 2099"></button>
+                    <button type="button" data-bs-target="#carruselKivo" data-bs-slide-to="3" aria-label="Pixel Quest Origins"></button>
+                </div>
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <img src="img/banner.jpg" class="d-block w-100" alt="Banner de Kivo: el zorro con un control de videojuegos y el eslogan El juego encuentra su lugar">
+                        <div class="carousel-caption">
+                            <p class="mb-0">Kivo: juegos para todas las consolas.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/juego-echoes.jpg" class="d-block w-100" alt="Portada del juego Zelda: Echoes of Time, templo en un bosque">
+                        <div class="carousel-caption">
+                            <p class="mb-0">Zelda: Echoes of Time</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/juego-cyber.jpg" class="d-block w-100" alt="Portada del juego Cyber Racers 2099, auto de carreras neon">
+                        <div class="carousel-caption">
+                            <p class="mb-0">Cyber Racers 2099</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/juego-pixelquest.jpg" class="d-block w-100" alt="Portada del juego Pixel Quest Origins, aventura en pixel art">
+                        <div class="carousel-caption">
+                            <p class="mb-0">Pixel Quest Origins</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselKivo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselKivo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ========== Sistema de cuadrículas: contenido + aside ========== -->
+        <div class="row g-4">
+            <div class="col-12 col-lg-8">
+                <section class="content-box p-3 p-md-4" aria-labelledby="bienvenida">
+                    <h2 id="bienvenida">Bienvenida</h2>
+                    <p>
+                        En <strong>Kivo</strong> encuentras videojuegos para PC, PlayStation, Xbox y Nintendo.
+                        Revisa los productos destacados o visita el catálogo completo. El juego encuentra su lugar.
+                    </p>
+                </section>
+
+                <!-- ========== Tarjetas de productos dentro del Grid ========== -->
+                <section class="content-box p-3 p-md-4" aria-labelledby="destacados" id="destacados-section">
+                    <h2 id="destacados">Productos destacados</h2>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                        <div class="col">
+                            <article class="card h-100 kivo-card kivo-card-1">
+                                <img src="img/juego-echoes.jpg" class="card-img-top" alt="Portada del juego Zelda: Echoes of Time, templo en un bosque">
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title h5">Zelda: Echoes of Time</h3>
+                                    <p class="card-text flex-grow-1">Aventura de mundo abierto para Nintendo Switch.</p>
+                                    <a href="productos.html" class="btn btn-kivo">Ver catálogo</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card h-100 kivo-card kivo-card-2">
+                                <img src="img/juego-cyber.jpg" class="card-img-top" alt="Portada del juego Cyber Racers 2099, auto de carreras neon">
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title h5">Cyber Racers 2099</h3>
+                                    <p class="card-text flex-grow-1">Carreras futuristas para PC y PlayStation.</p>
+                                    <a href="productos.html" class="btn btn-kivo">Ver catálogo</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card h-100 kivo-card kivo-card-3">
+                                <img src="img/juego-pixelquest.jpg" class="card-img-top" alt="Portada del juego Pixel Quest Origins, aventura en pixel art">
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title h5">Pixel Quest Origins</h3>
+                                    <p class="card-text flex-grow-1">RPG clásico en 2D, ideal para empezar la colección.</p>
+                                    <a href="productos.html" class="btn btn-kivo">Ver catálogo</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <p class="mt-3 mb-0">
+                        <a class="btn btn-kivo" href="productos.html">Ver todos los productos</a>
+                    </p>
+                </section>
+            </div>
+
+            <aside class="col-12 col-lg-4" aria-label="Información adicional">
+                <section class="content-box p-3 p-md-4" aria-labelledby="aviso-aside">
+                    <h2 id="aviso-aside" class="h4">¿Buscas un juego?</h2>
+                    <p>Revisa el catálogo o escríbenos si tienes dudas sobre un pedido.</p>
+                    <p class="mb-2"><a class="btn btn-kivo" href="productos.html">Ver catálogo</a></p>
+                    <p class="mb-0"><a href="contacto.html">Ir a contacto</a></p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-auto py-3">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-center text-md-start">
+            <p class="mb-0">Kivo — Av. Gamer 123, Santiago, Chile</p>
+            <p class="mb-0">Teléfono: +56 9 1234 5678</p>
+            <p class="mb-0">
+                Redes:
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram de Kivo">Instagram</a>
+                —
+                <a href="mailto:hola@kivo.cl" title="Enviar correo a Kivo">hola@kivo.cl</a>
+            </p>
+            <p class="mb-0"><a href="#top">Volver arriba</a></p>
+        </div>
+    </footer>
+
+    <!-- JS de Bootstrap (bundle incluye Popper: necesario para el menú hamburguesa y el carrusel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/funciones.js"></script>
+</body>
+
+</html>
