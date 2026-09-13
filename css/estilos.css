@@ -1,10 +1,11 @@
 /* ============================================
-   Kivo — Estilos Semana 4
+   Kivo — Estilos Semana 4 y 5
    CSS propio debajo de Bootstrap 5 (CDN).
    Conserva la identidad visual de Kivo
    (fondo oscuro + acento naranjo).
    El layout responsivo lo resuelve Bootstrap
    (navbar, grid, cards y carousel).
+   Semana 5: avisos creados por JavaScript.
    ============================================ */
 
 :root {
@@ -280,4 +281,23 @@ a:hover {
 
 .site-footer a:hover {
   color: var(--color-acento-hover);
+}
+
+/* --- Avisos dinámicos creados por JavaScript (Semana 5) --- */
+.aviso-dinamico {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--color-borde);
+}
+
+.aviso-exito {
+  background-color: rgba(34, 197, 94, 0.15);
+  border-color: #22c55e;
+  color: var(--color-texto);
+}
+
+.aviso-error {
+  background-color: rgba(239, 68, 68, 0.15);
+  border-color: #ef4444;
+  color: var(--color-texto);
 }
